@@ -31,8 +31,6 @@ class CustomComp extends Component {
   }
 
   render() {
-    console.log(this.state);
-
     const style = {
       color: this.state.color,
       cursor: 'pointer',
