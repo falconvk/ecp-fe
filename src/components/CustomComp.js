@@ -4,6 +4,7 @@ import { InputGroup, Alert } from 'react-bootstrap';
 
 const base_color_hex = '#000000';
 
+// TODO: all a loading indicator
 class CustomComp extends Component {
   constructor(props, context) {
     super(props, context);
@@ -59,7 +60,7 @@ class CustomComp extends Component {
   showError(message) {
     this.setState({ errorMessage: message, showError: true });
     setTimeout(() => {
-      this.setState({ errorMessage: '', showError: false });
+      this.clearError();
     }, 5000);
   }
 
