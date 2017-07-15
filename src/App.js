@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { InputGroup, FormControl, Col, Row} from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,9 +8,7 @@ import CustomComp from './components/CustomComp';
 class App extends Component {
   constructor(props, context) {
     super(props, context);
-
     this.state = { text: '' };
-
     this.updateText = this.updateText.bind(this);
   }
 
@@ -24,14 +23,30 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <CustomComp>
-            {mainText}
-          </CustomComp>
         </div>
-        <input
-          type="text"
-          value={this.state.text}
-          onChange={this.updateText} />
+        <div className="container">
+          <Row className="show-grid">
+            <Col sm={2}>
+
+            </Col>
+            <Col sm={8}>
+              <CustomComp>
+                {mainText}
+              </CustomComp>
+            </Col>
+            <Col sm={2}>
+
+            </Col>
+          </Row>
+          <InputGroup className="center-block">
+            <FormControl
+              className="text-center well"
+              placeholder="Got a better title?"
+              type="text"
+              value={this.state.text}
+              onChange={this.updateText} />
+          </InputGroup>
+        </div>
       </div>
     );
   }
