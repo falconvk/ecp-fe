@@ -32,6 +32,7 @@ class CustomComp extends Component {
       .then(data => {
         if (!data.new_color) {
           this.showError('Empty response color received!');
+          return;
         }
         const newState = Object.assign({}, this.state);
         newState.color = `#${data.new_color}`;
