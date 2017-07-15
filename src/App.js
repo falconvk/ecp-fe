@@ -25,19 +25,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <div className="container">
-          <Row className="show-grid">
-            <Col sm={2}>
-
-            </Col>
-            <Col sm={8}>
-              <CustomComp>
-                {mainText}
-              </CustomComp>
-            </Col>
-            <Col sm={2}>
-
-            </Col>
-          </Row>
+          <CustomComp>
+            {mainText}
+          </CustomComp>
           <InputGroup className="center-block">
             <FormControl
               className="text-center well"
